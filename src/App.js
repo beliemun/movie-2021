@@ -23,6 +23,7 @@ class App extends React.Component {
   }
 
   renderMovies = (movies) => {
+    console.log(movies);
     return movies.map((movie) => {
       return (
         <Movie
@@ -47,8 +48,8 @@ class App extends React.Component {
             <span className="loader_text">Loading.. </span>
           </div>
         ) : (
-          <div className="movies">{this.renderMovies(movies)}</div>
-        )}
+            <div className="movies">{this.renderMovies(movies)}</div>
+          )}
       </section>
     );
   }
